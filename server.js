@@ -9,7 +9,6 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-
 // Connect to database
 const db = mysql.createConnection(
     {
@@ -38,7 +37,6 @@ app.get('/api/candidates', (req, res) => {
         });
     });
 });
-
 
 // GET a single candidate
 app.get('/api/candidate/:id', (req, res) => {
